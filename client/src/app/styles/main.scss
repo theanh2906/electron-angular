@@ -1,0 +1,175 @@
+@import "primeng/resources/primeng.css";
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@for $i from 0 through 1000 {
+  .w-#{$i}px {
+    width: #{$i}px !important;
+
+    ::ng-deep .mat-mdc-form-field-infix {
+      width: #{$i}px !important;
+    }
+  }
+  .max-w-#{$i}px {
+    max-width: #{$i}px !important;
+  }
+  .min-w-#{$i}px {
+    min-width: #{$i}px !important;
+  }
+  .h-#{$i}px {
+    height: #{$i}px !important;
+  }
+  .max-h-#{$i}px {
+    max-height: #{$i}px !important;
+  }
+  .min-h-#{$i}px {
+    min-height: #{$i}px !important;
+  }
+  .ml-#{$i}px {
+    margin-left: #{$i}px !important;
+  }
+  .mr-#{$i}px {
+    margin-right: #{$i}px !important;
+  }
+  .mlm-#{$i}px {
+    margin-left: -#{$i}px !important;
+  }
+  .mrm-#{$i}px {
+    margin-right: -#{$i}px !important;
+  }
+  .mtm-#{$i}px {
+    margin-top: -#{$i}px !important;
+  }
+  .mbm-#{$i}px {
+    margin-bottom: -#{$i}px !important;
+  }
+  .mb-#{$i}px {
+    margin-bottom: #{$i}px !important;
+  }
+  .mt-#{$i}px {
+    margin-top: #{$i}px !important;
+  }
+  .my-#{$i}px {
+    margin-top: #{$i}px !important;
+    margin-bottom: #{$i}px !important;
+  }
+  .mx-#{$i}px {
+    margin-left: #{$i}px !important;
+    margin-right: #{$i}px !important;
+  }
+  .pl-#{$i}px {
+    padding-left: #{$i}px !important;
+  }
+  .pr-#{$i}px {
+    padding-right: #{$i}px !important;
+  }
+  .pb-#{$i}px {
+    padding-bottom: #{$i}px !important;
+  }
+  .pt-#{$i}px {
+    padding-top: #{$i}px !important;
+  }
+  .py-#{$i}px {
+    padding-top: #{$i}px !important;
+    padding-bottom: #{$i}px !important;
+  }
+  .px-#{$i}px {
+    padding-left: #{$i}px !important;
+    padding-right: #{$i}px !important;
+  }
+  .lh-#{$i}px {
+    line-height: #{$i}px !important;
+  }
+  .grid-gap-#{$i}px {
+    grid-gap: #{$i}px !important;
+  }
+}
+
+$directions: "top" "left" "right" "bottom";
+
+@each $direction in $directions {
+  .#{$direction}-0 {
+    #{$direction}: 0;
+  }
+}
+
+$heights: 10 20 30 40 50 60 70 80 90 100;
+$widths: 10 20 30 40 50 60 70 80 90 100;
+
+@each $height in $heights {
+  .h-#{$height} {
+    height: #{$height} + "%";
+  }
+}
+
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width} + "%";
+  }
+}
+
+@for $i from 2 through 6 {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+@for $i from 0 through 200 {
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-base-line {
+  align-items: baseline;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}

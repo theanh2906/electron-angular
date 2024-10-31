@@ -1,0 +1,30 @@
+{
+    "name": "metadefender-kiosk-electron",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+        "build": "webpack",
+        "dev": "npm run build && electron ../dist"
+    },
+    "author": "",
+    "license": "",
+    "devDependencies": {
+        "@types/node": "^20.3.2",
+        "concurrently": "^8.2.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "electron": "^25.2.0",
+        "electron-log": "^4.4.8",
+        "esbuild-loader": "^4.2.2",
+        "fork-ts-checker-webpack-plugin": "^9.0.2",
+        "node-addon-api": "^8.0.0",
+        "ts-loader": "^9.4.4",
+        "typescript": "^5.1.6",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1",
+        "webpack-merge": "^5.9.0"
+    },
+    "dependencies": {
+        "electron-devtools-installer": "^3.2.0"
+    }
+}

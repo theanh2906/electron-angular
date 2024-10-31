@@ -1,0 +1,30 @@
+{
+    "angularCompilerOptions": {
+        "enableIvy": true
+    },
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "strict": true,
+        "importHelpers": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "typeRoots": [
+            "../node_modules/@types",
+            "./node_modules/@types",
+            "./@types",
+            "../config"
+        ],
+        "skipLibCheck": true,
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "exclude": [
+        "node_modules"
+    ]
+}

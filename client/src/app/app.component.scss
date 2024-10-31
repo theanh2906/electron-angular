@@ -1,0 +1,53 @@
+@use "@angular/material" as mat;
+@include mat.core();
+.container {
+  padding: 80px 100px;
+  .percentage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .number {
+      color: #fff;
+      font-feature-settings:
+        "liga" off,
+        "clig" off;
+      font-family: "Simplon Norm", serif;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: -0.584px;
+    }
+    .description {
+      color: #fff;
+      font-family: Roboto, serif;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+    }
+    .progress-bar {
+      background: #63686e;
+    }
+    .detail {
+      color: #a4a8ae;
+      text-align: right;
+      font-family: Roboto, serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+    }
+  }
+  .carousel {
+    .image {
+      text-align: center;
+    }
+  }
+}
+
+mat-progress-bar {
+  --mdc-linear-progress-active-indicator-height: 16px;
+  --mdc-linear-progress-active-indicator-color: #1d6bfc;
+}

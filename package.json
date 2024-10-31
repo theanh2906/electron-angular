@@ -1,0 +1,32 @@
+{
+    "name": "peprocessor",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+        "client:install": "cd client && npm install",
+        "client:build": "cd client && npm run build",
+        "client:dev": "cd client && npm run dev",
+        "client:clean": "cd client && npm run clean",
+        "electron:install": "cd electron && npm install",
+        "electron:build": "cd electron && npm run build",
+        "electron:dev": "cd electron && npm run dev",
+        "electron:clean": "cd electron && npm run clean",
+        "build": "cross-env-shell NODE_ENV=prod \"npm run electron:build && npm run client:build && npm run pkg && npm run externals\"",
+        "build-mod": "cross-env THEME=MOD-theme.scss npm run build",
+        "dev": "cross-env-shell NODE_ENV=dev concurrently \\\"npm run electron:dev\\\" \\\"npm run client:dev\\\"",
+        "externals": "node externals.js",
+        "translations": "cd client && npm run translations",
+        "clean": "concurrently \"npm run electron:clean\" \"npm run client:clean\"",
+        "install-all": "npm install && concurrently \"npm run electron:install\" \"npm run client:install\""
+    },
+    "author": "",
+    "license": "",
+    "devDependencies": {
+        "concurrently": "^8.2.0",
+        "cross-env": "^7.0.3",
+        "electron": "^25.2.0",
+        "electron-packager": "^17.1.1",
+        "fs-extra": "^11.1.1",
+        "typescript": "^5.1.6"
+    }
+}
